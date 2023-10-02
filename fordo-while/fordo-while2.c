@@ -82,6 +82,7 @@ int main(int argc, char const *argv[])
 //b.f todays population=100000, increased at rate 10% per year for last 10 year 
 //wap to determine population at the end of each year in the last decade
 //p=b*r*n    find b=popul/100, population before 10 year
+
 /*#include<stdio.h>
 int main(int argc, char const *argv[])
 {
@@ -95,6 +96,7 @@ int main(int argc, char const *argv[])
     
     return 0;
 }*/
+
 /*
 #include<stdio.h>
 #include<conio.h>
@@ -112,6 +114,7 @@ int main()
 	return 0;
 }
 */
+
 // !!right logic of the above!!
 /*#include<stdio.h>
 int main(int argc, char const *argv[])
@@ -179,6 +182,45 @@ int main(int argc, char const *argv[])
     return 0;
 }*/
 
+/*#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+
+int main()
+{
+	int num, i, j, k, l;
+	for (num = 1; num < 5000; num++)
+	{
+		for (i = 1; i < num; i++)
+		{
+			if (num < i*i*i)
+				break;
+			for (j = i + 1; j < num; j++)
+			{
+				if (num < j*j*j)
+					break;
+				for (k = i + 1; k < num; k++)
+				{
+					if (k*k*k > i*i*i + j*j*j)
+						break;
+					for (l = k + 1; l < num; l++)
+					{
+						if (num < k*k*k + l*l*l)
+							break;
+						if ((num == i*i*i + j*j*j) && (num == k*k*k + l*l*l))
+						{
+							printf("\n%d^3 + %d^3 = %d^3 + %d^3 = num : %d",i, j, k, l, num);
+							break;
+						}
+					}
+				}
+			}
+		}
+	}
+	_getch();
+	return 0;
+}*/
+
 //b.h wap to print 24 hrs of day with suitable suffixes am pm midnight noon
 /*#include<stdio.h>
 int main(int argc, char const *argv[])
@@ -213,3 +255,27 @@ int main(int argc, char const *argv[])
  //           2       3
  //       4       5       6
  //   7       8       9       10
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int i,j,a=4,b=1,k,l=1;
+	for(i=1;i<=4;i++)
+	{
+		for(j=1;j<=a;j++)
+			printf(" ");
+		a--;
+		
+		for(k=1;k<=b;k++)
+		{
+			printf("%d ", l);
+			l++;
+		}
+		b++;
+		
+		printf("\n");
+	}
+	getch();
+	return 0;
+}
