@@ -256,7 +256,7 @@ int main(int argc, char const *argv[])
  //       4       5       6
  //   7       8       9       10
 
-#include<stdio.h>
+/*#include<stdio.h>
 #include<conio.h>
 int main()
 {
@@ -278,4 +278,4 @@ int main()
 	}
 	getch();
 	return 0;
-}
+}*/
