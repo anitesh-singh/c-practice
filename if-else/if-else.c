@@ -257,7 +257,7 @@ int main(int argc, char const *argv[])
   
 
 
-//monday on 1/1/1  wap to find out what is the on first jaunuary of the input year
+//monday on 1/1/1  wap to find out what is the on first jaunuary of the input year, gregorian calendar
 /*
 #include<stdio.h>
 int main()
@@ -301,10 +301,5 @@ int main()
     
     return 0;
 }*/
-
-
-
-
-
 
 

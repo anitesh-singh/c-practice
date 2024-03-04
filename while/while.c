@@ -175,21 +175,32 @@ int main()
 //display the count of positive negative and zeros entered
 /*
 #include<stdio.h>
-int main()
-{
-    int x,i=1;
-    int num;
-    printf("how much numbers you want to enter:\n");
-    scanf("%d",&x);
-    printf("enter the numbers:\n");
-    while (i++<=x)
+int main(){
+    int num, pos=0, neg=0, zer=0;
+    int y=1;
+    while(y)   //loop will check if the value of y is non-zero. if it is non-zero(true) then it will iterate, if it is zero(false) then it will not-iterate or get to the following statement after while block 
     {
+        printf("enter the number:\n");
         scanf("%d",&num);
-                    
+        if(num>0)
+        {
+            pos=pos+1;
+        }
+        if(num<0)
+        {
+            neg=neg+1;
+        }
+        if(num==0)
+        {
+            zer=zer+1;
+        }   
+        printf("\ndo you want to enter another no(1-for yes/0-for no):\n");
+        scanf("%d", &y);  
+        
     }
-    return 0;
+     printf("\npoitive count:%d\nnegative count:%d\nzeros count:%d",pos,neg,zer);
+     return 0;
 }
-*/
 
 
 //ascii values

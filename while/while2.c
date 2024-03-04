@@ -74,7 +74,7 @@ int main(int argc, char const *argv[])
     int num,rem,a=0,b=0,d;
     printf("enter the number:\n");
     scanf("%d",&num);
-    while (num)
+    while (num) //loop will check if the value of num is non-zero. if it is non-zero(true) then it will iterate, if it is zero(false) then it will not-iterate or get to the following statement after while block. 0 means false non zero means true
     {
         rem=num%8;
         a=a*10+rem;
