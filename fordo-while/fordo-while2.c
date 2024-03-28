@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
         printf ("\nEnter the compounding period:");
 
         scanf ("%f", &q);
-    
+        r=r/100;
         a=p*pow(( 1 + (r/q )), ( n*q ));
         printf("\nThe compounded amount=%f",a);
     }
@@ -119,16 +119,16 @@ int main()
 /*#include<stdio.h>
 int main(int argc, char const *argv[])
 {
-    int p=100000,i;          //let prev year pop be x, then new pop=x+x*10/100 from here pop, p=1000000
+    int p=100000,i;          //let prev year pop be x, then new population 100000=x+x*10/100 i.e. 11x=100000*10 from here pop, p=1000000
     for ( i = 1; i <=10; i++)
     {
+        //calculating previous year population
         p=(p*10)/11;
         printf("\n%d : %d year\n",p,10-i);
     }
     
     return 0;
 }*/
-
 
 
 //smilies over the screen
@@ -150,76 +150,31 @@ int main(int argc, char const *argv[])
 
 //b.g ramanujan number( smallest number that can be expressed as sum of two cubes in two different ways)
 /*#include<stdio.h>
-int main(int argc, char const *argv[])
-{
-    int a,b,c,i,j;
-    for ( a = 1; a <= 20; a++)
+int main(){
+    int a,b,c,d,num;
+    for ( a = 1; a <=20; a++)
     {
-        for ( b =a; b <= 20; b++)
+        for ( b = a+1; b <=20; b++)
         {
-        
-            c=a*a*a+b*b*b;
-            //printf("%d %d %d\n",a,b,c);
-            for ( i = 1; i <= 20; i++)
+            num=a*a*a+b*b*b;
+            for ( c = a+1; c <=20; c++)
             {
-                for ( j = i;  j<= 20; j++)   
+                for ( d =c+1; d <=20; d++)
                 {
-                    if (i*i*i + j*j*j == c && i!=a && j!=b  && i!=b && j!=a )
-                    {                    
-                        printf("\n %d %d, %d %d is %d\n",a,b,i,j,c);
+                    if(num==c*c*c+d*d*d)
+                    {
+                        printf("%d %d: %d \n%d %d: %d\n",a,b,num,c,d,num);
                     }
-                    
                 }
                 
             }
             
-            
-             
         }
-           
+        
     }
     
-    return 0;
 }*/
 
-/*#include<stdio.h>
-#include<conio.h>
-#include<math.h>
-
-int main()
-{
-	int num, i, j, k, l;
-	for (num = 1; num < 5000; num++)
-	{
-		for (i = 1; i < num; i++)
-		{
-			if (num < i*i*i)
-				break;
-			for (j = i + 1; j < num; j++)
-			{
-				if (num < j*j*j)
-					break;
-				for (k = i + 1; k < num; k++)
-				{
-					if (k*k*k > i*i*i + j*j*j)
-						break;
-					for (l = k + 1; l < num; l++)
-					{
-						if (num < k*k*k + l*l*l)
-							break;
-						if ((num == i*i*i + j*j*j) && (num == k*k*k + l*l*l))
-						{
-							printf("\n%d^3 + %d^3 = %d^3 + %d^3 = num : %d",i, j, k, l, num);
-							break;
-						}
-					}
-				}
-			}
-		}
-	}
-	_getch();
-	return 0;
-}*/
 
 //b.h wap to print 24 hrs of day with suitable suffixes am pm midnight noon
 /*#include<stdio.h>
@@ -250,32 +205,216 @@ int main(int argc, char const *argv[])
     return 0;
 }*/
 
-//b.i wap to print following output
+
+//b.i wap to print following output  floyd's triangle
   //              1
  //           2       3
  //       4       5       6
  //   7       8       9       10
 
 /*#include<stdio.h>
-#include<conio.h>
 int main()
 {
-	int i,j,a=4,b=1,k,l=1;
-	for(i=1;i<=4;i++)
-	{
-		for(j=1;j<=a;j++)
-			printf(" ");
-		a--;
-		
-		for(k=1;k<=b;k++)
-		{
-			printf("%d ", l);
-			l++;
-		}
-		b++;
-		
-		printf("\n");
-	}
-	getch();
-	return 0;
+    int i,j,k,l=1;
+    
+    
+    
+    for(i=1;i<=4;i++) //no. of rows
+    {
+        for(j=4;j>i;j--)//space from left
+        {
+            printf(" ");
+        }
+        for(k=1;k<=i;k++) //printing no. and adding space at right also including middle space  
+        {
+            printf("%d ",l++);
+        }
+        printf("\n");
+    }
+    
+
 }*/
+
+//printing star pattern
+/*#include<stdio.h>
+int main()
+{
+    int i,j,k,l=1;
+    
+    
+    
+    for(i=1;i<=4;i++) //no. of rows
+    {
+        for(j=4;j>i;j--)//space from left
+        {
+            printf(" ");
+        }
+        for(k=1;k<=i;k++) //printing no. and adding space at right also including middle space  
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    
+
+}*/
+
+//printing pattern at left side
+/*#include<stdio.h>
+int main()
+{
+    int i,j,k,l=1;
+    
+    
+    
+    for(i=1;i<=4;i++) //no. of rows
+    {
+        for(k=1;k<=i;k++)//printing the no. directly by the loop exluding the left and right spaces
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    
+
+}*/
+
+
+//pattern at right side 
+/*#include<stdio.h>
+int main()
+{
+    int i, j,k;
+    for(i=1;i<=4;i++)
+    {
+        for(j=4;j>i;j--)
+        {
+            printf(" ");
+        }
+        for(k=1;k<=i;k++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}*/
+
+//reverse of star pattern 
+/*#include<stdio.h>
+int main()
+{
+    int i, j,k,l;
+    for(i=1;i<=5;i++)
+    {
+        
+        for(j=1;j<i;j++)
+        {
+            printf(" ");
+        }
+        
+        for(k=5;k>=i;k--)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+}*/
+
+//printing the leg like star pattern  
+/*#include<stdio.h>
+int main()
+{
+    int i, j,k,l;
+    for(i=1;i<=5;i++)//no. of rows 
+    {
+        for ( l = 5; l>=i; l--)  // printing the left side start 
+        {
+            printf("*");
+        }
+        
+        for(j=1;j<=i;j++)
+        {
+            printf("  "); //two spaces required, spaces between the statement or stars
+        }
+       
+        for(k=5;k>=i;k--) // printing the right side star 
+        {
+            printf("*");
+        }
+        printf("\n"); //breaking the line after execution of the first row
+    }
+
+}*/
+
+
+//pattern(in these only we have to take input and decrement the starting loop)
+// ABCDEFGFEDCBA
+// ABCDEF FEDCBA
+// ABCDE   EFCBA
+/*#include<stdio.h>
+
+int main()
+{
+    int i,j,k;
+    for(i=7;i>=1;i--)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if (j<=i)
+            {
+                printf("%c",'A'+j-1);
+            }
+            else
+            {
+                printf(" ");
+            }
+            
+        }
+        for(k=6;k>=1;k--)
+        {
+            if(k<=i)
+            {
+                printf("%c",'A'+k-1);
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        
+    printf("\n");
+    }
+return 0;
+}*/
+
+//pascals triangle
+
+/*#include<stdio.h>
+int main()
+{
+    int row, spaces,i,coef=1;
+    for(row=0;row<=4;row++)
+    {
+        for(spaces=4;spaces>=row;spaces--)
+        {
+            printf("  ");
+        }
+        for(i=0;i<=row;i++)
+        {
+            if (i==0 || row==0)
+            {
+               coef=1;
+            }
+            else{
+                coef=coef*(row-i+1)/i;
+            }
+            printf("%4d",coef);
+        }
+    printf("\n");
+    }
+
+}*/
+
+

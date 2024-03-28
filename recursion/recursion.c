@@ -51,6 +51,35 @@ void factor(int num,int i)
 }
 */
 
+//another way
+/*#include<stdio.h>
+void prime_factor(int,int);
+int main()
+{
+    int num;
+    printf("enter the number for which you want to find the prime factors:\n");
+    scanf("%d",&num);
+    prime_factor(num,2);
+    return 0;
+}
+void prime_factor(int n,int i)
+{
+    if(n==1)
+    {
+        return;
+    }
+    else
+    {
+        if (n%i==0)
+        {
+            printf("%d ",i);
+            n=n/i;
+        }
+        else i++;
+        
+    }
+    prime_factor(n,i);
+}*/
 
 //recursive function to obtain first 25 number of fibonacci sequence(sum of two successive terms gives the third term)
 
@@ -122,5 +151,78 @@ int fibonacci(int a)
     }   
 }*/
   
+//integer to binary equivalent
+//without recursion
+
+//to calculate binary equivalent of the number by dividing the number by 2
+/*
+void nonrec_bin(int);
+#include<stdio.h>
+int main()
+    {
+        int number;
+        printf("Enter number\n");
+        scanf("%d",&number);
+        nonrec_bin(number);
+        return 0;
+    }
+void nonrec_bin(int num)
+{
+    int sum = 0;
+    for (; num; num /= 2)
+    {
+	//Next digit will placed at first position.
+	sum += num % 2;
+	sum *= 10;
+    }
+    printf("%d", sum);
+}*/
+
+//with recursion
+/*#include<stdio.h>
+int bin(int);
+int main()
+{  
+ int number;
+printf("Enter number\n");
+scanf("%d",&number);
+bin(number);
+return 0;
+  }
+  int bin(int number)
+    {
+if(number>1)
+{
+    bin(number/2);
+}
+printf("%d",number%2);
+
+return 0;
+}*/
+
+//sum of first n natural numbers
+/*#include<stdio.h>
+int sum(int);
+int main()
+{
+    int num;
+    printf("enter the number:\n");
+    scanf("%d",&num);
+
+    printf("%d",sum(num));
+    return 0;
+}
+int sum(int n)
+{
+    if(n==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return (n+sum(n-1));
+    }
     
-     
+}*/
+
+//tower of hannoi
