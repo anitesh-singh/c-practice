@@ -226,3 +226,55 @@ int sum(int n)
 }*/
 
 //tower of hannoi
+
+/*#include<stdio.h>
+void towerofhanoi(int n, char , char ,char );
+int main()
+{
+    int n=4;
+    towerofhanoi(n,'A','B','C');
+    return 0;
+}
+void towerofhanoi(int n, char src, char help,char dest)
+{
+        //base case
+        if(n==1)
+        {
+            printf("moving disk %d from %c to %c\n",n,src,dest);
+            return;
+        }
+
+        //moving n-1 disk to the middle tower with the help of third tower
+        
+        towerofhanoi(n-1,src,dest,help);
+        
+        //moving the last disk n at first tower to third tower
+        printf("moving disk %d from %c to %c\n",n,src,dest);
+        
+        //moving the n-1 disk from the middle tower to the third tower through first tower
+        towerofhanoi(n-1,help,src,dest);
+}*/
+
+#include <stdio.h>
+
+int main() {
+    int n, fs = 0, ts = 0, term = 1;
+    printf("Please enter the number of terms: ");
+    scanf("%d", &n);
+    
+    for (int i = 1; i <= n; i++) {
+        if (i % 5 == 0) {
+            fs = fs + ts;
+            printf("For i = %d and adding temporary sum = %d...\n", i, ts);
+            ts = 0;
+        } else {
+            fs = fs + term;
+            ts = ts + term;
+            printf("For i = %d and adding term = %d...\n", i, term);
+            term = term + 1;
+        }
+    }
+    printf("End of the program...\n");
+
+    return 0;
+}
