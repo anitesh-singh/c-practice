@@ -255,7 +255,7 @@ void towerofhanoi(int n, char src, char help,char dest)
         towerofhanoi(n-1,help,src,dest);
 }*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main() {
     int n, fs = 0, ts = 0, term = 1;
@@ -278,3 +278,4 @@ int main() {
 
     return 0;
 }
+*/

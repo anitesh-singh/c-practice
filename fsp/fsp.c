@@ -57,7 +57,7 @@ int main()
     }
 */
 
-//palindrome
+// palindrome
 /*#include<stdio.h>
 int main(int argc, char const *argv[])
 {
@@ -163,12 +163,13 @@ int main()
     return 0;
 }*/
 
-//***roman to decimal
-#include<stdio.h>
+//***roman to decimal (MDCLXV)
+#include <stdio.h>
 int main()
 {
     char ch;
-    printf("enter the roman number:\n");
-    scanf("%c",&ch);   
+    printf("enter the roman number(M D C L X V I):\n");
+    scanf("%c", &ch);
+   
     return 0;
 }
