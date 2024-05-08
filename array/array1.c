@@ -332,3 +332,69 @@ int main()
     return 0;
 }*/
 
+//some task
+/*#include<stdio.h>
+void modify(int *a,int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        a[i]=a[i]*3;
+    }
+    return ;
+}
+int main()
+{
+    int arr[]={2, 3,4,1,5,6,7,8,1,4};
+    modify(arr,10);
+    for (int i = 0; i < 10; i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    
+    return 0;
+}*/
+
+//area=(1/2)ab sin (angle) for 6 set of values and find which one is largest 
+/*#include<stdio.h>
+#include<math.h>
+float area(float a,float b,float angle){
+    float areaa;
+    areaa=(1.0/2.0)*a*b*sin(angle);
+    return areaa;
+}
+
+void largest(float *a){
+    float p=a[0];
+    int i;
+    for (i = 0; i < 6; i++)
+    {
+        if (p<a[i])
+        {
+            p=a[i];
+        }
+        
+    }
+    printf("\nthe plot %d has the largest area with %f value",i,p);
+    
+}
+
+int main()
+{
+    float a,b,angle;
+    float arr[6];
+    for (int i = 0; i < 6; i++)
+    {
+        printf("enter the value of the two side a, b and angle for %d plot\n",i+1);
+        scanf("%f%f%f",&a,&b,&angle);
+        arr[i]=area(a,b,angle);
+    }
+    for (int j = 0; j  < 6; j++)
+    {
+        printf("\narea of %d plot is %f\n",j+1,arr[j]);
+    }
+    largest(arr);
+    
+    return 0;
+}*/
+
+//dequeue
